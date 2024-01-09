@@ -3,9 +3,9 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background: linear-gradient(270deg, #f06, #48f);
+    background: linear-gradient(270deg, #7a1fa2, #e91e63);
     background-size: 400% 400%;
-    animation: gradient 60s ease infinite; /* Slower and more subtle background animation */
+    animation: gradient 60s ease infinite;
     color: white;
     height: 100vh;
     display: flex;
@@ -21,58 +21,58 @@ body {
 }
 
 .popup {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup-content {
-    background-color: #ffffffaa; /* Light white with transparency */
+    background-color: #ffffff22; /* Light white with transparency for a softer look */
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
     width: 90%;
-    box-shadow: none; /* Removing the box-shadow for a flatter look */
 }
 
 #popupContainer h2 {
-    color: black;
-    font-size: 2.5em; /* Increased font size */
+    color: white;
+    font-size: 3em;
     font-weight: bold;
+    margin: 0.5em 0;
 }
 
 .button-green, .button-red {
-    background-color: #008CBA; /* A more modern button color */
+    background-color: #22c1c3; /* Teal for a fresh, modern look */
     color: white;
-    padding: 15px 30px;
-    margin: 10px;
-    border: none; /* No border */
-    border-radius: 25px; /* Rounded corners */
+    padding: 20px 40px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1.5em; /* Larger text */
+    transition: transform 0.2s;
+    font-size: 2em;
     font-weight: bold;
-    width: 80%;
-    margin: 10px auto;
+    width: auto;
 }
 
 .button-red {
-    background-color: #f44336; /* A more modern red color */
+    background-color: #fd746c; /* Coral red for contrast */
 }
 
 .button-green:hover, .button-red:hover {
-    opacity: 0.8; /* Subtle hover effect */
+    transform: scale(1.05); /* Slightly enlarging buttons on hover */
+    opacity: 0.9;
 }
 
 #responseContainer {
-    padding: 20px;
     text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 .loader {
@@ -95,18 +95,16 @@ body {
 }
 
 #responseText, #instagramLink {
-    font-size: 2em; /* Larger text for better readability */
+    font-size: 2em;
     font-weight: bold;
-    color: black;
+    color: white;
     margin: 20px 0;
 }
 
 #instagramLink a {
-    color: black;
+    color: white;
     text-decoration: none;
+    font-size: 1.5em;
 }
 
-
-
-}
 
