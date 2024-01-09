@@ -1,78 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const outfitContainer = document.getElementById('outfit-container');
-    const filterButtons = document.querySelectorAll('.style-filter-btn');
+    window.closePopup = function(responseText) {
+        document.getElementById('popupContainer').style.display = 'none';
+        document.getElementById('responseContainer').style.display = 'block';
+        document.getElementById('responseText').innerText = "Ok. You are rewarded with a random meme.";
+        displayImage();
+        document.getElementById('instagramLink').style.display = 'block';
+    };
 
-    // Example outfits data with image link, descriptions, prices, and categories
-    const outfits = [
-        {
-            imageUrl: 'https://img.ltwebstatic.com/images3_pi/2023/11/29/8a/17012205597f16183bee6edab5c089c9e67accc0c1_thumbnail_405x552.webp',
-            description: 'Elegant Evening Dress - Perfect for any formal event.',
-            price: '$49.99',
-            buyLink: 'https://www.shein.com',
-            category: 'Formal'
-        },
-        {
-            imageUrl: 'https://img.ltwebstatic.com/images3_pi/2023/11/29/8a/17012205597f16183bee6edab5c089c9e67accc0c1_thumbnail_405x552.webp',
-            description: 'Casual Summer Dress - Stay cool and stylish.',
-            price: '$39.99',
-            buyLink: 'https://www.shein.com',
-            category: 'Casual'
-        },
-        {
-            imageUrl: 'https://img.ltwebstatic.com/images3_pi/2023/11/29/8a/17012205597f16183bee6edab5c089c9e67accc0c1_thumbnail_405x552.webp',
-            description: 'Classic Office Attire - Impress in every business meeting.',
-            price: '$59.99',
-            buyLink: 'https://www.shein.com',
-            category: 'Business'
-        }
-        // ... add more outfits as needed ...
-    ];
-
-    // Function to create and return an outfit element
-    function createOutfitElement(outfit) {
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'outfit-item';
-        itemDiv.innerHTML = `
-            <img class="outfit-image" src="${outfit.imageUrl}" alt="${outfit.description}" />
-            <div class="outfit-description">${outfit.description}</div>
-            <div class="outfit-price">${outfit.price}</div>
-            <a href="${outfit.buyLink}" target="_blank" class="buy-button">Buy</a>
-        `;
-        return itemDiv;
-    }
-
-   // Append all outfits to the container initially
-    outfits.forEach(outfit => {
-        outfitContainer.appendChild(createOutfitElement(outfit));
-    });
-
-    // Style filter button click handling
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            if (button.classList.contains('selected')) {
-                // If the button is already selected, remove the selection and show all items
-                filterButtons.forEach(btn => btn.classList.remove('selected'));
-                showAllOutfits();
-            } else {
-                // Remove 'selected' class from all buttons and add to the clicked one
-                filterButtons.forEach(btn => btn.classList.remove('selected'));
-                button.classList.add('selected');
-                // Filter the outfits based on the selected category
-                filterOutfits(button.textContent);
-            }
-        });
-    });
-
-    // Function to filter and display outfits based on the selected category
-    function filterOutfits(category) {
-        outfitContainer.innerHTML = ''; // Clear current outfits
-        outfits.filter(outfit => outfit.category === category)
-               .forEach(outfit => outfitContainer.appendChild(createOutfitElement(outfit)));
-    }
-
-    // Function to show all outfits
-    function showAllOutfits() {
-        outfitContainer.innerHTML = ''; // Clear current outfits
-        outfits.forEach(outfit => outfitContainer.appendChild(createOutfitElement(outfit)));
+    function displayImage() {
+        const imageUrls = [
+            'https://drive.google.com/uc?id=102SNTNuzrb40WUFEhreGo1IYd7aN3QC1',
+        'https://drive.google.com/uc?id=19IK2YH4ewR3rWNqvKhwRd6vi5JnUQ6rg',
+        'https://drive.google.com/uc?id=1tOU8a0Dp3phGY8J9lgq96adC7RokUIv-',
+        'https://drive.google.com/uc?id=1wH1k4_MtoQ3ZNqs1iokYy5kKjyJ_Y9pj',
+        'https://drive.google.com/uc?id=1MOLLaP_YYqgjcIlYB83RpvJMEJHp9t1N',
+        'https://drive.google.com/uc?id=1qNCJBu9_1HeidB-LbfArfxqu2EYmJVs1',
+        'https://drive.google.com/uc?id=1qVRIUqNk6U87goSteaoOHc8JSkbREsKU',
+        'https://drive.google.com/uc?id=1I2JajGrg-sGkcF6O7_MMPWUMqTARV5ni',
+        'https://drive.google.com/uc?id=1wKgUnNe-xJS_oqxz3mnMhJ10Z9GqJkPg',
+        'https://drive.google.com/uc?id=1T0coNfASR_4k7RSNOMbC8PBip5Mo_zbs',
+        'https://drive.google.com/uc?id=1R4f-q1SuHxnzkFMHkui3Q5jehwUQ9gIT',
+        'https://drive.google.com/uc?id=1Oy8ZkGaG-bgkEzutHYjJ-OvuXvlpdnGG',
+        'https://drive.google.com/uc?id=13CSxeslnJUuY92DkNO_F-w8Z5ibyctEG',
+        'https://drive.google.com/uc?id=1H8RS23Re6RxtkQV9KWnU1rHZNsemQi8I',
+        'https://drive.google.com/uc?id=1weNm5fQYhLxC9Ert7RErxNJk2PKQP62P',
+        'https://drive.google.com/uc?id=1oPFhjZdPIgiTQ_b6f4mKC4voduktHUpa',
+        'https://drive.google.com/uc?id=1_jzZE-DtLWyW2gyEkrvbZHbjhvlN80s0'
+        ];
+        const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        const memeImage = document.getElementById('memeImage');
+        memeImage.onload = function() {
+            document.querySelector('.loader').style.display = 'none';
+            memeImage.style.display = 'block';
+        };
+        memeImage.src = imageUrl;
+        document.getElementById('responseContainer').insertAdjacentHTML('afterbegin', '<div class="loader"></div>');
     }
 });
