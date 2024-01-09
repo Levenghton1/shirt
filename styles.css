@@ -70,9 +70,12 @@ body {
 }
 
 #responseContainer {
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px; /* Spacing from top */
+    width: 90%; /* Responsive width */
+    box-shadow: none;
 }
 
 .loader {
@@ -94,17 +97,23 @@ body {
     margin-top: 20px;
 }
 
-#responseText, #instagramLink {
-    font-size: 2em;
+#responseText {
+    font-size: 2em; /* Larger text for better readability */
     font-weight: bold;
     color: white;
-    margin: 20px 0;
+    margin-bottom: 20px; /* Spacing before the meme */
+}
+
+#instagramLink {
+    font-size: 1.5em; /* Consistent font sizing */
+    color: white; /* Consistent color */
+    margin-top: 20px; /* Spacing after the meme */
 }
 
 #instagramLink a {
     color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+    text-decoration: none; /* Remove underline */
 }
+
 
 
