@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Curated Outfits</title> <!-- Updated title here -->
-    <link rel="stylesheet" href="styles.css"> <!-- Make sure the path to your CSS file is correct -->
+    <title>QR Code Fun</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="app">
-        <h1>Your Curated Outfits</h1> <!-- Updated heading here -->
-        
-        <!-- Style Filter Buttons -->
-        <div id="style-filters">
-            <div class="style-filter-btn selected">Casual</div>
-            <div class="style-filter-btn">Formal</div>
-            <div class="style-filter-btn">Sport</div>
-            <div class="style-filter-btn">Evening</div>
-            <!-- Add more filters as needed -->
-        </div>
-
-        <!-- Outfit Container -->
-        <div id="outfit-container">
-            <!-- Outfit items will be injected by JavaScript -->
+    <div id="popupContainer" class="popup">
+        <div class="popup-content">
+            <h2>Scan rebel, huh?</h2>
+            <button id="sorryButton" class="button-red" onclick="closePopup('I am sorryyy')">I am sorryyy</button>
+            <button id="rebelButton" class="button-green" onclick="closePopup('Rebel all day!')">Rebel all day!</button>
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Make sure the path to your JavaScript file is correct -->
+    <div id="responseContainer" style="display:none;">
+        <p id="responseText"></p>
+        <img id="memeImage" src="" alt="Reddit Meme" style="max-width: 100%;">
+        <p id="instagramLink" style="display:none;">My Instagram: <a href="https://www.instagram.com/levenghton" target="_blank">levenghton</a></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
