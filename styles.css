@@ -93,8 +93,15 @@ body {
 }
 
 #memeImage {
-    max-width: 90%;
-    margin-top: 20px;
+    display: block; /* Changed to block to allow margin auto to work */
+    max-width: 90%; /* Limit meme image width for mobile */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image horizontally */
+}
+
+.meme-container {
+    text-align: center; /* Center align everything in the meme container */
+    width: 100%; /* Use the full width of the container */
 }
 
 #responseText {
@@ -105,15 +112,15 @@ body {
 }
 
 #instagramLink {
-    font-size: 1.5em; /* Consistent font sizing */
-    color: white; /* Consistent color */
+    font-size: 2em; /* Increase the font size for visibility */
+    color: white;
     margin-top: 20px; /* Spacing after the meme */
+    font-weight: bold; /* Optional: Make it bold */
 }
 
 #instagramLink a {
     color: white;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
-
 
 
