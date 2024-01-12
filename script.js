@@ -9,24 +9,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayImage() {
         const imageUrls = [
-        'https://drive.google.com/uc?id=102SNTNuzrb40WUFEhreGo1IYd7aN3QC1',
-        'https://drive.google.com/uc?id=19IK2YH4ewR3rWNqvKhwRd6vi5JnUQ6rg',
-        'https://drive.google.com/uc?id=1tOU8a0Dp3phGY8J9lgq96adC7RokUIv-',
-        'https://drive.google.com/uc?id=1wH1k4_MtoQ3ZNqs1iokYy5kKjyJ_Y9pj',
-        'https://drive.google.com/uc?id=1MOLLaP_YYqgjcIlYB83RpvJMEJHp9t1N',
-        'https://drive.google.com/uc?id=1qNCJBu9_1HeidB-LbfArfxqu2EYmJVs1',
-        'https://drive.google.com/uc?id=1qVRIUqNk6U87goSteaoOHc8JSkbREsKU',
-        'https://drive.google.com/uc?id=1I2JajGrg-sGkcF6O7_MMPWUMqTARV5ni',
-        'https://drive.google.com/uc?id=1wKgUnNe-xJS_oqxz3mnMhJ10Z9GqJkPg',
-        'https://drive.google.com/uc?id=1T0coNfASR_4k7RSNOMbC8PBip5Mo_zbs',
-        'https://drive.google.com/uc?id=1R4f-q1SuHxnzkFMHkui3Q5jehwUQ9gIT',
-        'https://drive.google.com/uc?id=1Oy8ZkGaG-bgkEzutHYjJ-OvuXvlpdnGG',
-        'https://drive.google.com/uc?id=13CSxeslnJUuY92DkNO_F-w8Z5ibyctEG',
-        'https://drive.google.com/uc?id=1H8RS23Re6RxtkQV9KWnU1rHZNsemQi8I',
-        'https://drive.google.com/uc?id=1weNm5fQYhLxC9Ert7RErxNJk2PKQP62P',
-        'https://drive.google.com/uc?id=1oPFhjZdPIgiTQ_b6f4mKC4voduktHUpa',
-        'https://drive.google.com/uc?id=1_jzZE-DtLWyW2gyEkrvbZHbjhvlN80s0'
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2020-03-10_14-21-52.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2020-03-30_15-10-12.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2020-04-20_09-03-18.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2021-08-13_09-45-33.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2022-03-27_08-23-16.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2022-06-02_01-54-03.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2022-11-24_18-30-03.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2022-12-18_05-10-09.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2023-01-16_18-18-40.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2023-10-17_14-19-00.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2023-11-01_18-54-31.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2023-11-15_08-04-11.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2023-12-09_16-11-58.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2023-12-23_20-57-30.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2024-01-03_09-21-01.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2024-01-05_23-37-26.jpg',
+            'https://raw.githubusercontent.com/Levenghton1/shirt/main/photo_2024-01-07_08-32-59.jpg'
         ];
+
         const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
         const memeImage = document.getElementById('memeImage');
         memeImage.onload = function() {
