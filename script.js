@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayImage() {
         const imageUrls = [
-            'https://drive.google.com/uc?id=102SNTNuzrb40WUFEhreGo1IYd7aN3QC1',
+        'https://drive.google.com/uc?id=102SNTNuzrb40WUFEhreGo1IYd7aN3QC1',
         'https://drive.google.com/uc?id=19IK2YH4ewR3rWNqvKhwRd6vi5JnUQ6rg',
         'https://drive.google.com/uc?id=1tOU8a0Dp3phGY8J9lgq96adC7RokUIv-',
         'https://drive.google.com/uc?id=1wH1k4_MtoQ3ZNqs1iokYy5kKjyJ_Y9pj',
